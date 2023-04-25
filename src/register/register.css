@@ -1,0 +1,38 @@
+:where(.css-dev-only-do-not-override-1fviqcj).ant-form-item .ant-form-item-label >label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before{
+    display: none!important;
+}
+:where(.css-dev-only-do-not-override-1fviqcj).ant-form-item .ant-form-item-label >label {
+    font-size: 18px;
+}
+:where(.css-dev-only-do-not-override-1fviqcj).ant-form-item {
+    margin-bottom: 42px;
+}
+:where(.css-dev-only-do-not-override-1fviqcj).ant-btn.ant-btn-lg {
+    height: 50px;
+    width: 180px;
+    margin-left: 50px;
+}
+:where(.css-dev-only-do-not-override-1fviqcj).ant-btn-primary {
+    background-color: #1677ff;
+}
+
+
+.background {
+    width: 760px;
+    height: 370px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    background: #ffffff; 
+    border-radius: 15px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+    padding: 50px; 
+}
+
+.closebutton {
+    position: absolute;
+    right: 4%;
+    top: 5%;
+    width: 30px;
+}

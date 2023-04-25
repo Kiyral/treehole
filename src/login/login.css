@@ -1,0 +1,45 @@
+:where(.css-dev-only-do-not-override-1fviqcj).ant-form-item .ant-form-item-label >label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before{
+    display: none!important;
+}
+:where(.css-dev-only-do-not-override-1fviqcj).ant-form-item:nth-child(1) {
+    margin-top: 70px;
+}
+:where(.css-dev-only-do-not-override-1fviqcj).ant-form-item{
+    margin-bottom: 42px;
+}
+
+:where(.css-dev-only-do-not-override-1fviqcj).ant-form {
+    margin-left: 100px;
+    width: 660px;
+}
+:where(.css-dev-only-do-not-override-1fviqcj) a {
+    margin-left: 15px;
+}
+
+.login-form-button {
+    height: 50px;
+    width: 180px;
+    background-color: #1677ff;
+    font-size: 18px;
+}
+
+
+.background {
+    width: 760px;
+    height: 370px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    background: #ffffff; 
+    border-radius: 15px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+    padding: 50px; 
+}
+
+.closebutton {
+    position: absolute;
+    right: 4%;
+    top: 5%;
+    width: 30px;
+}
