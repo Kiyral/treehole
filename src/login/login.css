@@ -1,35 +1,53 @@
-:where(.css-dev-only-do-not-override-1fviqcj).ant-form-item .ant-form-item-label >label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before{
-    display: none!important;
+:where(.css-dev-only-do-not-override-1fviqcj).ant-row {
+    justify-content: center;
 }
-:where(.css-dev-only-do-not-override-1fviqcj).ant-form-item:nth-child(1) {
-    margin-top: 70px;
+:where(.css-dev-only-do-not-override-1fviqcj).ant-form-item {
+    margin-bottom: 25px;
 }
-:where(.css-dev-only-do-not-override-1fviqcj).ant-form-item{
-    margin-bottom: 42px;
+.login-form{
+    padding-top: 20px;
+    position: relative;
+    left: calc(50% - 250px);
+    width: 500px;
 }
-
-:where(.css-dev-only-do-not-override-1fviqcj).ant-form {
-    margin-left: 100px;
-    width: 660px;
+.login-form-label{
+    box-sizing: border-box;
 }
-:where(.css-dev-only-do-not-override-1fviqcj) a {
-    margin-left: 15px;
+.login-form-button:hover{
+    opacity: 0.9;
 }
 
 .login-form-button {
-    height: 50px;
-    width: 180px;
+    transition: opacity 0.3s;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    height: 40px;
+    line-height: 40px;
     background-color: #1677ff;
     font-size: 18px;
+    margin-bottom: 10px;
 }
-
-
+.sign-form-button:hover{
+    border: #1677ff solid 1px;
+}
+.sign-form-button{
+    border: lightgray solid 1px;
+    transition: border 0.3s;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+}
 .background {
-    width: 760px;
-    height: 370px;
+    width: 600px;
+    height: 300px;
     position: absolute;
+    top: 100px;
     left: 50%;
-    top: 30%;
     transform: translateX(-50%);
     background: #ffffff; 
     border-radius: 15px; 
