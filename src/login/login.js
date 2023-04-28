@@ -20,18 +20,6 @@ const formItemLayout = {
     },
   },
 };
-const tailFormItemLayout = {
-  wrappercol: {
-    xs: {
-      span: 24,
-      offset: 0,
-    },
-    sm: {
-      span: 16,
-      offset: 8,
-    },
-  },
-};
 const Login = (props) => {
   const onFinish = (values) => {
     const data = {
@@ -46,12 +34,11 @@ const Login = (props) => {
     axios
       .post("http://localhost:3000/api/login", data, { headers })
       .then((response) => {
-        console.log(response.data);
+        localStorage.setItem('token', response.data.token);
         alert("登陆成功");
         props.onClose();
       })
       .catch((error) => {
-        console.error(error);
         alert(error.response.data.message);
       });
   };
@@ -110,7 +97,9 @@ const Login = (props) => {
         </Form.Item>
 
         <Form.Item>
-          <div className="login-form-button">登录</div>
+        <Button type="primary" htmlType="submit" className="login-form-button">
+          登录
+        </Button>
           <div className="sign-form-button" onClick={props.goRegister}>
             现在注册!
           </div>
