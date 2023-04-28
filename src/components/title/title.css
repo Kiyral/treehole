@@ -1,0 +1,38 @@
+.title-wrapper{
+    z-index: 100;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    width: 100vw;
+    height: 50px;
+    box-shadow: 0 -5px 10px gray;
+}
+.title-logo{
+    margin-left: 20px;
+    height: 30px;
+}
+.title-search-input{
+    margin-left: 50px;
+}
+.title-action{
+    display: flex;
+    font-size: 14px;
+}
+.title-login{
+    cursor: pointer;
+    margin-right: 5px;
+    background:#7cb0a7;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+.title-sign{
+    cursor: pointer;
+    margin-right: 10px;
+    color: #606060;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
