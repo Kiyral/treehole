@@ -2,16 +2,16 @@ import React from "react";
 import "./home.css";
 import { Input, Menu } from "antd";
 import {
-  SearchOutlined,
   StarOutlined,
   DislikeOutlined,
   QuestionOutlined,
   CoffeeOutlined,
 } from "@ant-design/icons";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import HomeList from "../../components/HomeList/HomeList";
 
+const { Search } = Input;
 function Home() {
-  const onSearch = (value) => console.log(value);
   const items = [
     {
       label: "分享",
@@ -35,31 +35,23 @@ function Home() {
     },
   ];
   const [current, setCurrent] = useState("share");
+  const [content, setContent] = useState("");
   const handleClick = (e) => {
-    console.log("click ", e);
     setCurrent(e.key);
   };
+  const onSearch = (value) => setContent(value);
   return (
     <div className="home-wrapper">
       <div className="home-background">
         <img className="home-logo" src="img2.png" />
         <div className="home-search">
-          <Input
-            placeholder="搜索树洞"
-            suffix={
-              <SearchOutlined
-                style={{
-                  color: "#7cb0a7",
-                  fontSize: "20px",
-                  marginRight: "10px",
-                }}
-              />
-            }
-            className="home-search-input"
-            size={"large"}
-            allowClear
-            onSearch={onSearch}
-          />
+        <Search
+      placeholder="搜索内容"
+      allowClear
+      enterButton
+      size="large"
+      onSearch={onSearch}
+    />
         </div>
       </div>
 
@@ -71,7 +63,7 @@ function Home() {
           selectedKeys={[current]}
           mode="horizontal"
         />
-        <div className="home-content"></div>
+        <div className="home-content"><HomeList current={current} content={content}/></div>
       </div>
     </div>
   );

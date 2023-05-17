@@ -1,6 +1,8 @@
 import { LockOutlined, UserOutlined, CloseOutlined } from "@ant-design/icons";
 import { Button, Form, Input } from "antd";
 import axios from "axios";
+import React, { useContext } from 'react';
+import { UserContext } from "../../UserContext";
 import "./login.css";
 const formItemLayout = {
   labelcol: {
@@ -21,6 +23,8 @@ const formItemLayout = {
   },
 };
 const Login = (props) => {
+  const {userInfo} = useContext(UserContext);    
+  const {SaveUserInfo} = useContext(UserContext);
   const onFinish = (values) => {
     const data = {
       email: values.email,
@@ -36,10 +40,12 @@ const Login = (props) => {
       .then((response) => {
         localStorage.setItem('token', response.data.token);
         alert("登陆成功");
+        SaveUserInfo(response.data.user.nickname);
         props.onClose();
+        props.handleLoggedin(true);
       })
       .catch((error) => {
-        alert(error.response.data.message);
+        alert(error);
       });
   };
   return (

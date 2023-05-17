@@ -7,6 +7,12 @@
     display: none;
 }
 
+:where(.css-dev-only-do-not-override-1h5dct1).ant-input-search >.ant-input-group >.ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary){
+    font-size: 18px;
+    color: #7cb0a7;
+}
+
+
 .home-wrapper{
     position: relative;
     top:50px;
@@ -28,8 +34,8 @@
     width: 400px;
     margin-bottom: 40px;
 }
-.home-search-input{
-    padding-left: 20px;
+.home-search{
+    padding-left: 10px;
     width: 400px;
     border-radius: 50px;
 }

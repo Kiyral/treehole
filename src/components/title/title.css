@@ -37,6 +37,22 @@
     border-radius: 20px;
 }
 
+.user-avatar {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.user-nickname {
+    border: none;
+    font-size: 20px;
+    line-height: 20px;
+}
+
 .overlay {
     position: fixed;
     top: 0;
@@ -55,3 +71,6 @@
     pointer-events: auto;
   }
   
+  .user-nickname-button {
+    margin-right: 15px;
+  }
