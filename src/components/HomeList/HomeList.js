@@ -32,7 +32,7 @@ function HomeList(props){
         data = data.map(({ nickname: title, time: description, ...rest }) => {
           return { title, description, ...rest };
         });
-        data = data.map(obj => {
+        /*data = data.map(obj => {
             const date = new Date(obj.description);
             const year = date.getFullYear();
             const month = (date.getMonth() + 1).toString().padStart(2, '0');
@@ -41,7 +41,7 @@ function HomeList(props){
             const minutes = date.getMinutes().toString().padStart(2, '0');
             const formattedDate = `${year}-${month}-${day} ${hours}:${minutes}`;
             return { ...obj, description: formattedDate };
-          });
+          });*/
         setListData(data);
       })
       .catch((error) => {
@@ -66,7 +66,7 @@ return (
       <List.Item.Meta
         avatar={<Avatar src={item.avatar} />}
         title={<a href={item.href}>{item.title}</a>}
-        description={item.description}
+        /*description={item.description}*/
       />
       {item.content}
     </List.Item>

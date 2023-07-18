@@ -1,8 +1,9 @@
-import { FileOutlined, PieChartOutlined, UserOutlined, TeamOutlined, DesktopOutlined } from '@ant-design/icons';
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import {  PieChartOutlined,DesktopOutlined } from '@ant-design/icons';
+import { Layout, Menu, theme } from 'antd';
 import { useState } from 'react';
 import Modification from '../../components/modification/modification';
-const { Header, Content, Footer, Sider } = Layout;
+import Create from '../../components/create/create';
+const { Header, Content,  Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {
     key,
@@ -61,7 +62,7 @@ const User = () => {
             }}
           >
             {selectedKey === '1' && <Modification/>}
-            {selectedKey === '2' && <div>内容2</div>}
+            {selectedKey === '2' && <Create/>}
           </div>
         </Content>
       </Layout>
